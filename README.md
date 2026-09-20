@@ -13,3 +13,10 @@ source .venv/Scripts/activate      # Windows
 # source .venv/bin/activate        # Linux/macOS
 pip install -r requirements.txt
 python app.py
+
+## API
+
+| Метод | Путь | Тело | Ответ |
+|---|---|---|---|
+| POST | /api/data | `{"text": "..."}` | `{"status": "ok"}` |
+| GET  | /api/data | — | `{"content": ["...", "..."]}` |
