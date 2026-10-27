@@ -1,4 +1,3 @@
-# app.py — Backend v1.0
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import os
@@ -7,7 +6,6 @@ app = Flask(__name__)
 CORS(app)
 
 DATA_FILE = os.path.join(os.path.dirname(__file__), "data.txt")
-
 
 @app.route("/api/data", methods=["POST"])
 def save_data():
@@ -28,4 +26,4 @@ def read_data():
     return jsonify({"content": lines})
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
